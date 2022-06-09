@@ -1,0 +1,21 @@
+Erase all the data of a DynamoDB table
+
+
+Usage:
+  dynamocli erase TABLE
+
+Options:
+  [--with-drift], [--no-with-drift]  # drop the table and
+  recreate it directly instead of use deployments
+
+Description:
+  `dynamocli erase` will erase all the data of the specified table.
+
+  It will drop the table and recreate it.
+
+  If the table is in a stack it will try to deploy
+  the stack without the table and then redeploy the
+  stack with the original template. You can change
+  this behavior passing the option --with-drift.
+
+  > $ dynamo erase users
