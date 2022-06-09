@@ -1,0 +1,25 @@
+We can import small amount of data to AWS DynamoDB using folllwing command
+
+1.  Configure aws on terminal using aws configure and enter secret and access key
+
+2. install dynamdob cli using the below command
+gem install dynamocli
+
+
+TO import data from a CSV file to a DynamoDB table
+
+Usage:
+  dynamocli import FILE -t, --table, --to=TABLE
+
+Options:
+  -t, --table, --to=TABLE                                  # table you want to import the data
+          [--exported-from-aws], [--no-exported-from-aws]  # modify the headers before importing the csv
+
+Description:
+  `dynamocli import` will import the data in from a file to a table specified.
+
+  > $ dynamocli import users.csv --to users
+  here users is the name of schema or table and users.csv is the data file stored in CSV
+  
+  
+  
